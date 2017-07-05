@@ -15,6 +15,8 @@
 		DD43F3BE1F0C9167003C8F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD43F3BC1F0C9167003C8F05 /* LaunchScreen.storyboard */; };
 		DD43F3C91F0C9167003C8F05 /* _______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD43F3C81F0C9167003C8F05 /* _______Tests.m */; };
 		DD43F3D41F0C9167003C8F05 /* _______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD43F3D31F0C9167003C8F05 /* _______UITests.m */; };
+		DD43F3E61F0C91D1003C8F05 /* ChoosePhoController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD43F3E51F0C91D1003C8F05 /* ChoosePhoController.m */; };
+		DD43F3E91F0C91DC003C8F05 /* ChoosePhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD43F3E81F0C91DC003C8F05 /* ChoosePhotoCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,8 @@
 		DD43F3AF1F0C9167003C8F05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DD43F3B11F0C9167003C8F05 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DD43F3B21F0C9167003C8F05 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DD43F3B41F0C9167003C8F05 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DD43F3B51F0C9167003C8F05 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DD43F3B41F0C9167003C8F05 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		DD43F3B51F0C9167003C8F05 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		DD43F3B81F0C9167003C8F05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD43F3BA1F0C9167003C8F05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD43F3BD1F0C9167003C8F05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,11 @@
 		DD43F3CF1F0C9167003C8F05 /* 多张图片选择器UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "多张图片选择器UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD43F3D31F0C9167003C8F05 /* _______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______UITests.m"; sourceTree = "<group>"; };
 		DD43F3D51F0C9167003C8F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD43F3E41F0C91D1003C8F05 /* ChoosePhoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoosePhoController.h; sourceTree = "<group>"; };
+		DD43F3E51F0C91D1003C8F05 /* ChoosePhoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoosePhoController.m; sourceTree = "<group>"; };
+		DD43F3E71F0C91DC003C8F05 /* ChoosePhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoosePhotoCell.h; sourceTree = "<group>"; };
+		DD43F3E81F0C91DC003C8F05 /* ChoosePhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoosePhotoCell.m; sourceTree = "<group>"; };
+		DD43F3EA1F0C91FA003C8F05 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +108,12 @@
 		DD43F3AD1F0C9167003C8F05 /* 多张图片选择器 */ = {
 			isa = PBXGroup;
 			children = (
+				DD43F3E21F0C91AE003C8F05 /* M */,
+				DD43F3E31F0C91AE003C8F05 /* V */,
+				DD43F3E11F0C91AE003C8F05 /* C */,
 				DD43F3B11F0C9167003C8F05 /* AppDelegate.h */,
 				DD43F3B21F0C9167003C8F05 /* AppDelegate.m */,
-				DD43F3B41F0C9167003C8F05 /* ViewController.h */,
-				DD43F3B51F0C9167003C8F05 /* ViewController.m */,
+				DD43F3EA1F0C91FA003C8F05 /* Header.h */,
 				DD43F3B71F0C9167003C8F05 /* Main.storyboard */,
 				DD43F3BA1F0C9167003C8F05 /* Assets.xcassets */,
 				DD43F3BC1F0C9167003C8F05 /* LaunchScreen.storyboard */,
@@ -138,6 +147,33 @@
 				DD43F3D51F0C9167003C8F05 /* Info.plist */,
 			);
 			path = "多张图片选择器UITests";
+			sourceTree = "<group>";
+		};
+		DD43F3E11F0C91AE003C8F05 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				DD43F3E41F0C91D1003C8F05 /* ChoosePhoController.h */,
+				DD43F3E51F0C91D1003C8F05 /* ChoosePhoController.m */,
+				DD43F3B41F0C9167003C8F05 /* ViewController.h */,
+				DD43F3B51F0C9167003C8F05 /* ViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		DD43F3E21F0C91AE003C8F05 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		DD43F3E31F0C91AE003C8F05 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				DD43F3E71F0C91DC003C8F05 /* ChoosePhotoCell.h */,
+				DD43F3E81F0C91DC003C8F05 /* ChoosePhotoCell.m */,
+			);
+			path = V;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +243,7 @@
 				TargetAttributes = {
 					DD43F3AA1F0C9167003C8F05 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = B7UQ7WHB5T;
 						ProvisioningStyle = Automatic;
 					};
 					DD43F3C31F0C9167003C8F05 = {
@@ -273,6 +310,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD43F3E91F0C91DC003C8F05 /* ChoosePhotoCell.m in Sources */,
+				DD43F3E61F0C91D1003C8F05 /* ChoosePhoController.m in Sources */,
 				DD43F3B61F0C9167003C8F05 /* ViewController.m in Sources */,
 				DD43F3B31F0C9167003C8F05 /* AppDelegate.m in Sources */,
 				DD43F3B01F0C9167003C8F05 /* main.m in Sources */,
@@ -424,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B7UQ7WHB5T;
 				INFOPLIST_FILE = "多张图片选择器/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ganZhi.-------";
@@ -435,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B7UQ7WHB5T;
 				INFOPLIST_FILE = "多张图片选择器/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ganZhi.-------";
@@ -507,6 +548,7 @@
 				DD43F3DA1F0C9167003C8F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD43F3DB1F0C9167003C8F05 /* Build configuration list for PBXNativeTarget "多张图片选择器Tests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +557,7 @@
 				DD43F3DD1F0C9167003C8F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD43F3DE1F0C9167003C8F05 /* Build configuration list for PBXNativeTarget "多张图片选择器UITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +566,7 @@
 				DD43F3E01F0C9167003C8F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
