@@ -29,6 +29,8 @@
     [choosePhotoVC sendStrFunc:CGSizeMake(choosePhotoVC.view.frame.size.width, choosePhotoVC.view.frame.size.height) maxNumber:6 showNumber:4];
     [choosePhotoVC setSendArrblock:^(NSMutableArray *photoArr) {
         NSLog(@"photoArr = %@",photoArr);
+        UIImage *image = photoArr[0];
+        NSLog(@"image = %g    %g   %g",image.size.width * image.scale,image.size.height * image.scale,image.scale);
     }];
     [self addChildViewController:choosePhotoVC];
     [self.view addSubview:choosePhotoVC.view];

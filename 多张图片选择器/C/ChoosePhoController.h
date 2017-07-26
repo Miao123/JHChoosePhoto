@@ -13,8 +13,8 @@
 @property (nonatomic, copy) void(^sendArrblock)(NSMutableArray *);
 
 /*
- number     上传的最大数量
- 
+ maxNumber     上传的最大数量
+ showNumber    每行显示的最多数量
  */
 - (void)sendStrFunc:(CGSize)size maxNumber:(int)maxNumber showNumber:(int)showNumber;
 

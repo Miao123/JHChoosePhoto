@@ -198,9 +198,11 @@
         [_imageScroll addSubview:bottonView];
         
         
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, (screenHight - screenWidth) / 2, screenWidth, screenWidth)];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHight)];
         imageView.image = _photoArr[i];
         imageView.userInteractionEnabled = YES;
+        imageView.center = bottonView.center;
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
         [bottonView addSubview:imageView];
     }
 }
