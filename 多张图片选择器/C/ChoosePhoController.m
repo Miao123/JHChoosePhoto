@@ -57,28 +57,7 @@
     [self.view addSubview:photoColl];
     
     
-    UIScrollView *imageScroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHight)];
-    imageScroll.backgroundColor = [UIColor blackColor];
-    imageScroll.pagingEnabled = YES;
-    imageScroll.bounces = NO;
-    imageScroll.delegate = self;
-    self.imageScroll = imageScroll;
-    imageScroll.userInteractionEnabled = YES;
     
-    
-    UIPageControl *pageControl = [[UIPageControl alloc] init];
-    pageControl.frame = CGRectMake((screenWidth - 20) / 2, screenHight - 50, 20, 20);
-    pageControl.currentPage = 0;
-    pageControl.hidden = YES;
-    pageControl.pageIndicatorTintColor = RGB_COLOR(70, 70, 70);
-    pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
-    self.pageControl = pageControl;
-    
-    
-    UITapGestureRecognizer *scrTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(scrTap:)];
-    scrTap.numberOfTapsRequired = 1;
-    scrTap.numberOfTouchesRequired = 1;
-    [imageScroll addGestureRecognizer:scrTap];
     
 }
 
@@ -128,20 +107,14 @@
     }else{
         
         [self bigImage];
-        _imageScroll.contentSize = CGSizeMake(screenWidth * _photoArr.count, screenHight);
-        _pageControl.numberOfPages = _photoArr.count;
+        
         NSUInteger tag = indexPath.row;
         self.imageScroll.contentOffset = CGPointMake(screenWidth * tag, 0);
-        [UIView animateWithDuration:0 animations:^{
-            [[UIApplication sharedApplication].keyWindow addSubview:_imageScroll];
-            [[UIApplication sharedApplication].keyWindow addSubview:_pageControl];
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:0.3 animations:^{
-                _pageControl.hidden = NO;
-                self.imageScroll.alpha = 1;
-            }];
-        }];
         
+        [UIView animateWithDuration:0.25 animations:^{
+            _pageControl.hidden = NO;
+            self.imageScroll.alpha = 1;
+        }];
     }
 }
 
@@ -192,6 +165,36 @@
 
 
 - (void)bigImage{
+    
+    UIScrollView *imageScroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHight)];
+    imageScroll.backgroundColor = [UIColor blackColor];
+    imageScroll.pagingEnabled = YES;
+    imageScroll.bounces = NO;
+    imageScroll.delegate = self;
+    imageScroll.contentSize = CGSizeMake(screenWidth * _photoArr.count, screenHight);
+    imageScroll.alpha = 0;
+    self.imageScroll = imageScroll;
+    imageScroll.userInteractionEnabled = YES;
+    [[UIApplication sharedApplication].keyWindow addSubview:_imageScroll];
+    
+    
+    UIPageControl *pageControl = [[UIPageControl alloc] init];
+    pageControl.frame = CGRectMake((screenWidth - 20) / 2, screenHight - 50, 20, 20);
+    pageControl.currentPage = 0;
+    pageControl.hidden = YES;
+    pageControl.pageIndicatorTintColor = RGB_COLOR(70, 70, 70);
+    pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
+    pageControl.numberOfPages = _photoArr.count;
+    self.pageControl = pageControl;
+    [[UIApplication sharedApplication].keyWindow addSubview:_pageControl];
+    
+    
+    UITapGestureRecognizer *scrTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(scrTap:)];
+    scrTap.numberOfTapsRequired = 1;
+    scrTap.numberOfTouchesRequired = 1;
+    [imageScroll addGestureRecognizer:scrTap];
+    
+    
     for (int i = 0; i < _photoArr.count; i++) {
         UIView *bottonView = [[UIView alloc] initWithFrame:CGRectMake(screenWidth * i, 0, screenWidth, screenHight)];
         bottonView.backgroundColor = [UIColor blackColor];
@@ -201,19 +204,17 @@
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHight)];
         imageView.image = _photoArr[i];
         imageView.userInteractionEnabled = YES;
-        imageView.center = bottonView.center;
+        //        imageView.center = bottonView.center;
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         [bottonView addSubview:imageView];
     }
 }
 
 - (void)scrTap:(UITapGestureRecognizer *)tap{
-    //    [UIView animateWithDuration:0.3 animations:^{
     [_imageScroll removeFromSuperview];
     [_pageControl removeFromSuperview];
     self.imageScroll.alpha = 0;
     _pageControl.hidden = YES;
-    //    }];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
